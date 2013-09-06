@@ -1,0 +1,166 @@
+		list p=16F1937
+		#include	<p16f1937.inc>
+
+; =================================
+;
+; Data in Program EEPROM
+;
+; =================================
+
+waveform_data	code	0x1C00
+
+; Waveforms
+; each waveform consists of eight 8bit samples.
+; Waveform 0 is at full counter-clockwise on the knob.  15 is full clockwise.
+; We could easily have 32 or 64 waveforms if we wanted.
+; There is also an algorithm that could calculate the ordering of the
+;   waveforms on the knob so that each postition is a logical progression.
+
+; Waveform 0
+		data	0x00FF
+		data	0x00FF
+		data	0x00FF
+		data	0x00FF
+		data	0x0000
+		data	0x0000
+		data	0x0000
+		data	0x0000
+; Waveform 1
+		data	0x00FF
+		data	0x00FF
+		data	0x00FF
+		data	0x0000
+		data	0x0000
+		data	0x0000
+		data	0x0000
+		data	0x0000
+; Waveform 2
+		data	0x00FF
+		data	0x00FF
+		data	0x0000
+		data	0x0000
+		data	0x0000
+		data	0x0000
+		data	0x0000
+		data	0x0000
+; 3
+		data	0x00FF
+		data	0x0000
+		data	0x0000
+		data	0x0000
+		data	0x0000
+		data	0x0000
+		data	0x0000
+		data	0x0000
+; 4
+		data	0x00FF
+		data	0x006C
+		data	0x0048
+		data	0x0024
+		data	0x0000
+		data	0x0000
+		data	0x0000
+		data	0x0000
+; 5
+		data	0x00FF
+		data	0x00B4
+		data	0x0090
+		data	0x006C
+		data	0x0048
+		data	0x0024
+		data	0x0000
+		data	0x0000
+; 6
+		data	0x00FF
+		data	0x00D8
+		data	0x00B4
+		data	0x0090
+		data	0x006C
+		data	0x0048
+		data	0x0024
+		data	0x0000
+; 7
+		data	0x00FF
+		data	0x00D5
+		data	0x00AB
+		data	0x0081
+		data	0x0057
+		data	0x002D
+		data	0x0000
+		data	0x002D
+; 8
+		data	0x00FF
+		data	0x00CC
+		data	0x0099
+		data	0x0066
+		data	0x0033
+		data	0x0000
+		data	0x0033
+		data	0x0066
+; 9
+		data	0x00FF
+		data	0x00DC
+		data	0x007F
+		data	0x0023
+		data	0x0000
+		data	0x0023
+		data	0x007F
+		data	0x00DC
+; 10
+		data	0x00FF
+		data	0x007F
+		data	0x0000
+		data	0x007F
+		data	0x00FF
+		data	0x007F
+		data	0x0000
+		data	0x007F
+; 11
+		data	0x00FF
+		data	0x00AA
+		data	0x0055
+		data	0x0000
+		data	0x00FF
+		data	0x00AA
+		data	0x0055
+		data	0x0000
+; 12
+		data	0x00FF
+		data	0x0000
+		data	0x00BF
+		data	0x0000
+		data	0x007F
+		data	0x0000
+		data	0x003F
+		data	0x0000
+; 13
+		data	0x00FF
+		data	0x0000
+		data	0x00FF
+		data	0x0000
+		data	0x00FF
+		data	0x007F
+		data	0x003F
+		data	0x0000
+; 14
+		data	0x00FF
+		data	0x007F
+		data	0x0000
+		data	0x00FF
+		data	0x007F
+		data	0x0000
+		data	0x00FF
+		data	0x0000
+; 15
+		data	0x00FF
+		data	0x0000
+		data	0x00FF
+		data	0x0000
+		data	0x00FF
+		data	0x0000
+		data	0x00FF
+		data	0x0000
+
+
+		end
+
